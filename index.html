@@ -198,6 +198,132 @@ nav a:hover {
   margin-bottom: 7px;
 }
 
+/* STATISTIK SEKOLAH */
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.stat-card {
+  background: white;
+  padding: 24px;
+  border-radius: 15px;
+  border: 1px solid #edf0f5;
+  box-shadow: 0 5px 18px #00000009;
+}
+
+.stat-icon {
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.stat-card h3 {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: normal;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--navy);
+  margin-top: 5px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.stats-panel {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #edf0f5;
+  box-shadow: 0 5px 18px #00000009;
+  min-width: 0;
+}
+
+.stats-panel h3 {
+  color: var(--navy);
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 85px 1fr 35px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 13px;
+}
+
+.bar-label {
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.bar-track {
+  height: 12px;
+  background: #edf2f8;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--gold));
+  border-radius: 20px;
+  transition: width .5s;
+}
+
+.bar-value {
+  text-align: right;
+  color: var(--navy);
+  font-weight: bold;
+}
+
+.gender-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.gender-item {
+  background: #f3f7fc;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+}
+
+.gender-item strong {
+  display: block;
+  font-size: 26px;
+  color: var(--navy);
+}
+
+.gender-item span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.stats-status {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.stats-updated {
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: right;
+}
+
 /* LAYANAN */
 .services-note {
   background: #eaf2fa;
@@ -304,6 +430,10 @@ footer p {
   .hero {
     padding: 50px 35px;
   }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media(max-width: 600px) {
@@ -393,6 +523,28 @@ footer p {
   .info-box {
     padding: 23px;
   }
+
+  .stats-summary {
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 17px;
+  }
+
+  .stat-number {
+    font-size: 27px;
+  }
+
+  .stats-panel {
+    padding: 18px 14px;
+  }
+
+  .bar-row {
+    grid-template-columns: 75px 1fr 30px;
+    gap: 7px;
+    font-size: 12px;
+  }
 }
 
 @media(max-width: 360px) {
@@ -409,7 +561,6 @@ footer p {
 <header>
   <div class="header-content">
     <div class="logo">🏫</div>
-
     <div class="school-name">
       <h2>SD NEGERI 9 AIRGEGAS</h2>
       <p>Website Resmi Satuan Pendidikan</p>
@@ -421,6 +572,7 @@ footer p {
 <nav>
   <a href="#beranda">Beranda</a>
   <a href="#profil">Profil</a>
+  <a href="#statistik">Statistik</a>
   <a href="#layanan">Layanan Digital</a>
   <a href="#informasi">Informasi</a>
   <a href="#kontak">Kontak</a>
@@ -428,35 +580,27 @@ footer p {
 
 <!-- BERANDA -->
 <section class="hero" id="beranda">
-
   <span>SELAMAT DATANG DI WEBSITE RESMI</span>
-
   <h1>SD NEGERI 9 AIRGEGAS</h1>
-
   <p>
     Membangun generasi yang cerdas, berkarakter,
     berprestasi dan berbudaya melalui pendidikan
     yang berkualitas.
   </p>
-
   <a href="#profil" class="hero-button">
     Mengenal Sekolah →
   </a>
-
 </section>
 
 <!-- PROFIL -->
 <section class="container" id="profil">
-
   <div class="section-title">
     <h2>Profil Sekolah</h2>
     <p>Mengenal lebih dekat satuan pendidikan kami</p>
   </div>
 
   <div class="profile">
-
     <h3>SD NEGERI 9 AIRGEGAS</h3>
-
     <p>
       SD NEGERI 9 AIRGEGAS merupakan satuan
       pendidikan jenjang Sekolah Dasar yang
@@ -464,16 +608,90 @@ footer p {
       Airgegas, Kabupaten Bangka Selatan,
       Provinsi Kepulauan Bangka Belitung.
     </p>
-
     <br>
-
     <p><b>NPSN:</b> 10900887</p>
     <p><b>Status:</b> Negeri</p>
     <p><b>Jenjang:</b> Sekolah Dasar</p>
     <p><b>Alamat:</b> JL. Payung - Air Bara</p>
+  </div>
+</section>
+
+<!-- STATISTIK SEKOLAH -->
+<section class="container" id="statistik">
+
+  <div class="section-title">
+    <h2>Statistik Sekolah</h2>
+    <p>Data peserta didik SD NEGERI 9 AIRGEGAS secara otomatis</p>
+  </div>
+
+  <p class="stats-status" id="statusStatistik">
+    Menghubungkan ke database sekolah...
+  </p>
+
+  <div class="stats-summary">
+
+    <div class="stat-card">
+      <div class="stat-icon">👨‍🎓</div>
+      <h3>Total Peserta Didik</h3>
+      <div class="stat-number" id="totalSiswa">-</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">🏫</div>
+      <h3>Jumlah Rombel</h3>
+      <div class="stat-number" id="totalRombel">-</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">👦</div>
+      <h3>Siswa Laki-laki</h3>
+      <div class="stat-number" id="jumlahLaki">-</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">👧</div>
+      <h3>Siswa Perempuan</h3>
+      <div class="stat-number" id="jumlahPerempuan">-</div>
+    </div>
 
   </div>
 
+  <div class="stats-grid">
+
+    <div class="stats-panel">
+      <h3>📊 Jumlah Siswa Berdasarkan Kelas</h3>
+      <div id="grafikKelas"></div>
+    </div>
+
+    <div class="stats-panel">
+      <h3>📅 Jumlah Siswa Berdasarkan Umur</h3>
+      <div id="grafikUmur"></div>
+    </div>
+
+    <div class="stats-panel">
+      <h3>👦👧 Komposisi Jenis Kelamin</h3>
+      <div class="gender-summary">
+        <div class="gender-item">
+          <strong id="persenLaki">-</strong>
+          <span>Laki-laki</span>
+        </div>
+        <div class="gender-item">
+          <strong id="persenPerempuan">-</strong>
+          <span>Perempuan</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-panel">
+      <h3>📚 Jumlah Siswa Berdasarkan Agama</h3>
+      <div id="grafikAgama"></div>
+    </div>
+
+  </div>
+
+  <p class="stats-updated" id="waktuStatistik">
+    Menunggu pembaruan data...
+  </p>
 </section>
 
 <!-- LAYANAN DIGITAL -->
@@ -492,11 +710,8 @@ footer p {
 
   <div class="cards">
 
-    <!-- SEMUA MENU ADMINISTRASI MENUJU SATU APLIKASI -->
     <a href="https://script.google.com/macros/s/AKfycbzqwf6wcMMfKYsvVWRAus41PGV8yarTeci8rqogspGyBrv7ImZDMbDfY1T-lw0217cn8w/exec"
-       class="card"
-       target="_blank"
-       rel="noopener">
+       class="card" target="_blank" rel="noopener">
       <div class="icon">👨‍🎓</div>
       <h3>Data Siswa</h3>
       <p>Pengelolaan dan pencarian data peserta didik.</p>
@@ -504,9 +719,7 @@ footer p {
     </a>
 
     <a href="https://script.google.com/macros/s/AKfycbzqwf6wcMMfKYsvVWRAus41PGV8yarTeci8rqogspGyBrv7ImZDMbDfY1T-lw0217cn8w/exec"
-       class="card"
-       target="_blank"
-       rel="noopener">
+       class="card" target="_blank" rel="noopener">
       <div class="icon">👨‍🏫</div>
       <h3>Data Guru</h3>
       <p>Informasi guru dan tenaga kependidikan.</p>
@@ -514,9 +727,7 @@ footer p {
     </a>
 
     <a href="https://script.google.com/macros/s/AKfycbzqwf6wcMMfKYsvVWRAus41PGV8yarTeci8rqogspGyBrv7ImZDMbDfY1T-lw0217cn8w/exec"
-       class="card"
-       target="_blank"
-       rel="noopener">
+       class="card" target="_blank" rel="noopener">
       <div class="icon">📨</div>
       <h3>Surat Keluar</h3>
       <p>Aplikasi pencatatan administrasi surat keluar.</p>
@@ -524,16 +735,13 @@ footer p {
     </a>
 
     <a href="https://script.google.com/macros/s/AKfycbzqwf6wcMMfKYsvVWRAus41PGV8yarTeci8rqogspGyBrv7ImZDMbDfY1T-lw0217cn8w/exec"
-       class="card"
-       target="_blank"
-       rel="noopener">
+       class="card" target="_blank" rel="noopener">
       <div class="icon">📊</div>
       <h3>Statistik Siswa</h3>
       <p>Grafik dan informasi jumlah peserta didik.</p>
       <span class="access">Masuk ke aplikasi →</span>
     </a>
 
-    <!-- LAYANAN PENGEMBANGAN BERIKUTNYA -->
     <a href="#informasi" class="card">
       <div class="icon">🔄</div>
       <h3>Layanan Siswa Mutasi</h3>
@@ -549,52 +757,189 @@ footer p {
     </a>
 
   </div>
-
 </section>
 
 <!-- INFORMASI -->
 <section class="container" id="informasi">
-
   <div class="section-title">
     <h2>Informasi Sekolah</h2>
     <p>Berita dan kegiatan SD NEGERI 9 AIRGEGAS</p>
   </div>
 
   <div class="info-box">
-
     <h3>Selamat Datang di Website Sekolah</h3>
-
     <p>
       Website ini dikembangkan sebagai pusat
       informasi, komunikasi dan layanan digital
       SD NEGERI 9 AIRGEGAS.
     </p>
-
   </div>
-
 </section>
 
 <!-- FOOTER -->
 <footer id="kontak">
-
   <h3>SD NEGERI 9 AIRGEGAS</h3>
-
   <p>
     JL. Payung - Air Bara, Kecamatan Airgegas,
     Kabupaten Bangka Selatan,
     Kepulauan Bangka Belitung.
   </p>
-
-  <p>
-    NPSN 10900887
-  </p>
-
+  <p>NPSN 10900887</p>
   <p>
     © 2026 SD NEGERI 9 AIRGEGAS.
     Seluruh Hak Dilindungi.
   </p>
-
 </footer>
+
+<script>
+
+// URL WEB APP GOOGLE APPS SCRIPT
+const URL_STATISTIK =
+  'https://script.google.com/macros/s/AKfycbzqwf6wcMMfKYsvVWRAus41PGV8yarTeci8rqogspGyBrv7ImZDMbDfY1T-lw0217cn8w/exec';
+
+
+// MEMBUAT GRAFIK BATANG
+function buatGrafikStatistik(id, data) {
+
+  const tempat = document.getElementById(id);
+  tempat.replaceChildren();
+
+  const daftar = Object.entries(data || {});
+
+  daftar.sort(function(a, b) {
+    return a[0].localeCompare(a[0], 'id', {numeric:true});
+  });
+
+  if (daftar.length === 0) {
+    tempat.textContent = 'Belum ada data.';
+    return;
+  }
+
+  const maksimum = Math.max(
+    1,
+    ...daftar.map(item => Number(item[1]) || 0)
+  );
+
+  daftar.forEach(function(item) {
+
+    const nama = item[0];
+    const jumlah = Number(item[1]) || 0;
+    const persen = (jumlah / maksimum) * 100;
+
+    const baris = document.createElement('div');
+    baris.className = 'bar-row';
+
+    const label = document.createElement('div');
+    label.className = 'bar-label';
+    label.textContent = nama;
+
+    const track = document.createElement('div');
+    track.className = 'bar-track';
+
+    const isi = document.createElement('div');
+    isi.className = 'bar-fill';
+    isi.style.width = persen + '%';
+
+    const nilai = document.createElement('div');
+    nilai.className = 'bar-value';
+    nilai.textContent = jumlah.toLocaleString('id-ID');
+
+    track.appendChild(isi);
+    baris.appendChild(label);
+    baris.appendChild(track);
+    baris.appendChild(nilai);
+
+    tempat.appendChild(baris);
+  });
+}
+
+
+// MENAMPILKAN DATA STATISTIK
+function tampilkanStatistikSekolah(data) {
+
+  const status = document.getElementById('statusStatistik');
+
+  if (!data || !data.sukses) {
+    status.textContent = 'Statistik belum dapat dimuat.';
+    return;
+  }
+
+  const total = Number(data.total) || 0;
+  const laki = Number(data.lakiLaki) || 0;
+  const perempuan = Number(data.perempuan) || 0;
+
+  document.getElementById('totalSiswa').textContent =
+    total.toLocaleString('id-ID');
+
+  document.getElementById('totalRombel').textContent =
+    Object.keys(data.perKelas || {}).length;
+
+  document.getElementById('jumlahLaki').textContent =
+    laki.toLocaleString('id-ID');
+
+  document.getElementById('jumlahPerempuan').textContent =
+    perempuan.toLocaleString('id-ID');
+
+  const persenLaki = total
+    ? Math.round(laki / total * 100)
+    : 0;
+
+  const persenPerempuan = total
+    ? Math.round(perempuan / total * 100)
+    : 0;
+
+  document.getElementById('persenLaki').textContent =
+    persenLaki + '%';
+
+  document.getElementById('persenPerempuan').textContent =
+    persenPerempuan + '%';
+
+  buatGrafikStatistik('grafikKelas', data.perKelas);
+  buatGrafikStatistik('grafikUmur', data.perUmur);
+  buatGrafikStatistik('grafikAgama', data.perAgama);
+
+  status.textContent =
+    'Data statistik berhasil diperbarui dari database sekolah.';
+
+  if (data.diperbarui) {
+    document.getElementById('waktuStatistik').textContent =
+      'Terakhir diperbarui: ' +
+      new Date(data.diperbarui).toLocaleString('id-ID', {
+        dateStyle: 'long',
+        timeStyle: 'short'
+      });
+  }
+}
+
+
+// MENGAMBIL DATA DARI GOOGLE APPS SCRIPT
+function muatStatistikSekolah() {
+
+  const namaCallback = 'tampilkanStatistikSekolah';
+
+  const script = document.createElement('script');
+
+  script.src =
+    URL_STATISTIK +
+    '?mode=stats&callback=' +
+    namaCallback +
+    '&t=' + Date.now();
+
+  script.async = true;
+
+  script.onerror = function() {
+    document.getElementById('statusStatistik').textContent =
+      'Koneksi statistik gagal. Silakan muat ulang halaman.';
+  };
+
+  document.body.appendChild(script);
+}
+
+
+// JALANKAN KETIKA HALAMAN DIBUKA
+muatStatistikSekolah();
+
+</script>
 
 </body>
 </html>
