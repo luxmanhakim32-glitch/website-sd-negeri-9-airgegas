@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SD Negeri 9 Airgegas</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #263445;
+    }
+
+    header {
+      background: #123967;
+      color: white;
+      padding: 20px 7%;
+    }
+
+    .brand {
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #d7e7f7;
+    }
+
+    nav {
+      background: #ffffff;
+      padding: 15px 7%;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px #00000010;
+    }
+
+    nav a {
+      color: #123967;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .hero {
+      margin: 30px auto;
+      width: 86%;
+      padding: 65px 30px;
+      background: linear-gradient(120deg, #123967, #2677b9);
+      color: white;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      line-height: 1.8;
+    }
+
+    .container {
+      width: 86%;
+      margin: 35px auto;
+    }
+
+    .container h2 {
+      margin-bottom: 20px;
+      color: #123967;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #0000000d;
+      text-decoration: none;
+      color: #263445;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      color: #1763a0;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 50px;
+      background: #123967;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 24px;
+      }
+
+      nav {
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand">SD NEGERI 9 AIRGEGAS</div>
+    <div class="subtitle">
+      Website Resmi Sekolah
+    </div>
+  </header>
+
+  <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#profil">Profil Sekolah</a>
+    <a href="#layanan">Layanan Digital</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section class="hero" id="beranda">
+    <h1>Selamat Datang</h1>
+    <p>
+      Website Resmi SD NEGERI 9 AIRGEGAS
+      <br>
+      Media informasi, komunikasi dan layanan digital sekolah.
+    </p>
+  </section>
+
+  <section class="container" id="profil">
+    <h2>Profil Sekolah</h2>
+    <p>
+      SD NEGERI 9 AIRGEGAS merupakan satuan pendidikan
+      jenjang Sekolah Dasar yang berlokasi di Desa Air Bara,
+      Kecamatan Airgegas, Kabupaten Bangka Selatan,
+      Provinsi Kepulauan Bangka Belitung.
+    </p>
+  </section>
+
+  <section class="container" id="layanan">
+    <h2>Layanan Digital Sekolah</h2>
+
+    <div class="cards">
+
+      <a href="#" class="card">
+        <h3>Data Siswa</h3>
+        <p>Pengelolaan dan informasi data peserta didik.</p>
+      </a>
+
+      <a href="#" class="card">
+        <h3>Data Guru</h3>
+        <p>Informasi tenaga pendidik dan kependidikan.</p>
+      </a>
+
+      <a href="#" class="card">
+        <h3>Surat Keluar</h3>
+        <p>Aplikasi administrasi persuratan sekolah.</p>
+      </a>
+
+      <a href="#" class="card">
+        <h3>Statistik Sekolah</h3>
+        <p>Informasi statistik dan data sekolah.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <footer id="kontak">
+    <strong>SD NEGERI 9 AIRGEGAS</strong>
+    <br>
+    JL. Payung - Air Bara, Kecamatan Airgegas
+    <br>
+    Kabupaten Bangka Selatan, Kepulauan Bangka Belitung
+    <br>
+    © 2026 SD NEGERI 9 AIRGEGAS
+  </footer>
+
+</body>
+</html>
