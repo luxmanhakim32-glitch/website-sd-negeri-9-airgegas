@@ -2,208 +2,418 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SD Negeri 9 Airgegas</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<title>SD Negeri 9 Airgegas | Website Resmi</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #263445;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    header {
-      background: #123967;
-      color: white;
-      padding: 20px 7%;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    .brand {
-      font-size: 23px;
-      font-weight: bold;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f8fc;
+  color: #263445;
+  line-height: 1.6;
+}
 
-    .subtitle {
-      margin-top: 6px;
-      font-size: 13px;
-      color: #d7e7f7;
-    }
+/* HEADER */
+header {
+  background: #123967;
+  color: white;
+  padding: 18px 7%;
+}
 
-    nav {
-      background: #ffffff;
-      padding: 15px 7%;
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-      box-shadow: 0 2px 8px #00000010;
-    }
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-    nav a {
-      color: #123967;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-    }
+.logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: white;
+  color: #123967;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
 
-    .hero {
-      margin: 30px auto;
-      width: 86%;
-      padding: 65px 30px;
-      background: linear-gradient(120deg, #123967, #2677b9);
-      color: white;
-      border-radius: 15px;
-      text-align: center;
-    }
+.school-name h2 {
+  font-size: 21px;
+}
 
-    .hero h1 {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
+.school-name p {
+  font-size: 12px;
+  color: #cbdced;
+}
 
-    .hero p {
-      line-height: 1.8;
-    }
+/* NAVIGATION */
+nav {
+  background: white;
+  padding: 15px 7%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+  box-shadow: 0 3px 10px #0000000b;
+}
 
-    .container {
-      width: 86%;
-      margin: 35px auto;
-    }
+nav a {
+  text-decoration: none;
+  color: #123967;
+  font-weight: bold;
+  font-size: 14px;
+}
 
-    .container h2 {
-      margin-bottom: 20px;
-      color: #123967;
-    }
+nav a:hover {
+  color: #e5a52e;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
+/* HERO */
+.hero {
+  margin: 30px auto;
+  width: 86%;
+  min-height: 320px;
+  border-radius: 18px;
+  background: linear-gradient(120deg,#123967,#2677b9);
+  color: white;
+  padding: 65px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 3px 12px #0000000d;
-      text-decoration: none;
-      color: #263445;
-      transition: 0.2s;
-    }
+.hero span {
+  color: #ffd36a;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 
-    .card:hover {
-      transform: translateY(-4px);
-    }
+.hero h1 {
+  font-size: 38px;
+  margin: 15px 0;
+  max-width: 650px;
+}
 
-    .card h3 {
-      color: #1763a0;
-      margin-bottom: 10px;
-    }
+.hero p {
+  max-width: 600px;
+  color: #e2edf8;
+}
 
-    footer {
-      margin-top: 50px;
-      background: #123967;
-      color: white;
-      padding: 25px;
-      text-align: center;
-      font-size: 13px;
-      line-height: 1.8;
-    }
+.hero-button {
+  display: inline-block;
+  margin-top: 25px;
+  background: #e5a52e;
+  color: #123967;
+  padding: 12px 22px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+  width: fit-content;
+}
 
-    @media (max-width: 600px) {
-      .cards {
-        grid-template-columns: 1fr;
-      }
+/* CONTENT */
+.container {
+  width: 86%;
+  margin: 55px auto;
+}
 
-      .hero h1 {
-        font-size: 24px;
-      }
+.section-title {
+  margin-bottom: 25px;
+}
 
-      nav {
-        gap: 15px;
-      }
-    }
-  </style>
+.section-title h2 {
+  color: #123967;
+  font-size: 26px;
+}
+
+.section-title p {
+  color: #718096;
+  font-size: 14px;
+}
+
+/* PROFIL */
+.profile {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 5px solid #e5a52e;
+}
+
+/* LAYANAN */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px #0000000a;
+  text-decoration: none;
+  color: #263445;
+  transition: .3s;
+  border: 1px solid #edf0f5;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px #00000012;
+}
+
+.card .icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: #123967;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #718096;
+}
+
+/* INFORMASI */
+.info-box {
+  background: #eaf2fa;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+/* FOOTER */
+footer {
+  background: #102f50;
+  color: white;
+  padding: 35px 7%;
+  margin-top: 70px;
+  text-align: center;
+}
+
+footer p {
+  color: #cbdced;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width: 600px) {
+  .hero {
+    padding: 40px 25px;
+    min-height: 280px;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .card {
+    padding: 18px 12px;
+  }
+
+  .card h3 {
+    font-size: 14px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  .school-name h2 {
+    font-size: 17px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="brand">SD NEGERI 9 AIRGEGAS</div>
-    <div class="subtitle">
-      Website Resmi Sekolah
+<!-- HEADER -->
+<header>
+  <div class="header-content">
+    <div class="logo">🏫</div>
+    <div class="school-name">
+      <h2>SD NEGERI 9 AIRGEGAS</h2>
+      <p>Website Resmi Satuan Pendidikan</p>
     </div>
-  </header>
+  </div>
+</header>
 
-  <nav>
-    <a href="#beranda">Beranda</a>
-    <a href="#profil">Profil Sekolah</a>
-    <a href="#layanan">Layanan Digital</a>
-    <a href="#kontak">Kontak</a>
-  </nav>
+<!-- MENU -->
+<nav>
+  <a href="#beranda">Beranda</a>
+  <a href="#profil">Profil</a>
+  <a href="#layanan">Layanan Digital</a>
+  <a href="#informasi">Informasi</a>
+  <a href="#kontak">Kontak</a>
+</nav>
 
-  <section class="hero" id="beranda">
-    <h1>Selamat Datang</h1>
-    <p>
-      Website Resmi SD NEGERI 9 AIRGEGAS
-      <br>
-      Media informasi, komunikasi dan layanan digital sekolah.
-    </p>
-  </section>
+<!-- BERANDA -->
+<section class="hero" id="beranda">
+  <span>SELAMAT DATANG</span>
 
-  <section class="container" id="profil">
+  <h1>SD NEGERI 9 AIRGEGAS</h1>
+
+  <p>
+    Membangun generasi yang cerdas, berkarakter,
+    berprestasi dan berbudaya melalui pendidikan
+    yang berkualitas.
+  </p>
+
+  <a href="#profil" class="hero-button">
+    Mengenal Sekolah →
+  </a>
+</section>
+
+<!-- PROFIL -->
+<section class="container" id="profil">
+
+  <div class="section-title">
     <h2>Profil Sekolah</h2>
+    <p>Mengenal lebih dekat satuan pendidikan kami</p>
+  </div>
+
+  <div class="profile">
+    <h3>SD NEGERI 9 AIRGEGAS</h3>
+
     <p>
-      SD NEGERI 9 AIRGEGAS merupakan satuan pendidikan
-      jenjang Sekolah Dasar yang berlokasi di Desa Air Bara,
-      Kecamatan Airgegas, Kabupaten Bangka Selatan,
+      SD NEGERI 9 AIRGEGAS merupakan satuan
+      pendidikan jenjang Sekolah Dasar yang
+      berlokasi di Desa Air Bara, Kecamatan
+      Airgegas, Kabupaten Bangka Selatan,
       Provinsi Kepulauan Bangka Belitung.
     </p>
-  </section>
 
-  <section class="container" id="layanan">
+    <br>
+
+    <p><b>NPSN:</b> 10900887</p>
+    <p><b>Status:</b> Negeri</p>
+    <p><b>Jenjang:</b> Sekolah Dasar</p>
+    <p><b>Alamat:</b> JL. Payung - Air Bara</p>
+  </div>
+
+</section>
+
+<!-- LAYANAN DIGITAL -->
+<section class="container" id="layanan">
+
+  <div class="section-title">
     <h2>Layanan Digital Sekolah</h2>
+    <p>Akses layanan administrasi dan informasi sekolah</p>
+  </div>
 
-    <div class="cards">
+  <div class="cards">
 
-      <a href="#" class="card">
-        <h3>Data Siswa</h3>
-        <p>Pengelolaan dan informasi data peserta didik.</p>
-      </a>
+    <a href="#" class="card">
+      <div class="icon">👨‍🎓</div>
+      <h3>Data Siswa</h3>
+      <p>Pengelolaan data peserta didik.</p>
+    </a>
 
-      <a href="#" class="card">
-        <h3>Data Guru</h3>
-        <p>Informasi tenaga pendidik dan kependidikan.</p>
-      </a>
+    <a href="#" class="card">
+      <div class="icon">👨‍🏫</div>
+      <h3>Data Guru</h3>
+      <p>Informasi guru dan tenaga kependidikan.</p>
+    </a>
 
-      <a href="#" class="card">
-        <h3>Surat Keluar</h3>
-        <p>Aplikasi administrasi persuratan sekolah.</p>
-      </a>
+    <a href="#" class="card">
+      <div class="icon">📨</div>
+      <h3>Surat Keluar</h3>
+      <p>Aplikasi administrasi persuratan.</p>
+    </a>
 
-      <a href="#" class="card">
-        <h3>Statistik Sekolah</h3>
-        <p>Informasi statistik dan data sekolah.</p>
-      </a>
+    <a href="#" class="card">
+      <div class="icon">📊</div>
+      <h3>Statistik Siswa</h3>
+      <p>Grafik dan informasi peserta didik.</p>
+    </a>
 
-    </div>
-  </section>
+    <a href="#" class="card">
+      <div class="icon">🧾</div>
+      <h3>Kwitansi BOSP</h3>
+      <p>Aplikasi pencatatan dan cetak kwitansi.</p>
+    </a>
 
-  <footer id="kontak">
-    <strong>SD NEGERI 9 AIRGEGAS</strong>
-    <br>
-    JL. Payung - Air Bara, Kecamatan Airgegas
-    <br>
-    Kabupaten Bangka Selatan, Kepulauan Bangka Belitung
-    <br>
-    © 2026 SD NEGERI 9 AIRGEGAS
-  </footer>
+    <a href="#" class="card">
+      <div class="icon">📚</div>
+      <h3>Informasi Akademik</h3>
+      <p>Informasi kegiatan pendidikan.</p>
+    </a>
+
+  </div>
+</section>
+
+<!-- INFORMASI -->
+<section class="container" id="informasi">
+
+  <div class="section-title">
+    <h2>Informasi Sekolah</h2>
+    <p>Berita dan kegiatan SD NEGERI 9 AIRGEGAS</p>
+  </div>
+
+  <div class="info-box">
+    <h3>Selamat Datang di Website Sekolah</h3>
+    <p>
+      Website ini dikembangkan sebagai pusat
+      informasi, komunikasi dan layanan digital
+      SD NEGERI 9 AIRGEGAS.
+    </p>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer id="kontak">
+  <h3>SD NEGERI 9 AIRGEGAS</h3>
+
+  <p>
+    JL. Payung - Air Bara, Kecamatan Airgegas,
+    Kabupaten Bangka Selatan,
+    Kepulauan Bangka Belitung.
+  </p>
+
+  <p>
+    © 2026 SD NEGERI 9 AIRGEGAS.
+    Seluruh Hak Dilindungi.
+  </p>
+</footer>
 
 </body>
 </html>
+
