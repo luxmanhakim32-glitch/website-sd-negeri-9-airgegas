@@ -6,8 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SD Negeri 9 Airgegas | Website Resmi</title>
+<meta name="description" content="Website resmi SD Negeri 9 Airgegas. Pusat informasi sekolah dan layanan administrasi digital.">
 
 <style>
+:root {
+  --navy: #123967;
+  --blue: #1d5d96;
+  --gold: #e5a52e;
+  --light: #f4f7fb;
+  --text: #263445;
+  --muted: #718096;
+  --white: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,82 +27,97 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 85px;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background: #f5f8fc;
-  color: #263445;
-  line-height: 1.6;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.7;
 }
 
 /* HEADER */
 header {
-  background: #123967;
+  background: linear-gradient(120deg, #102f50, #174b7e);
   color: white;
-  padding: 18px 7%;
+  padding: 17px 7%;
 }
 
 .header-content {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
 .logo {
-  width: 55px;
-  height: 55px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   background: white;
-  color: #123967;
+  color: var(--navy);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 25px;
+  font-size: 30px;
+  flex-shrink: 0;
 }
 
 .school-name h2 {
   font-size: 21px;
+  letter-spacing: .5px;
 }
 
 .school-name p {
   font-size: 12px;
-  color: #cbdced;
+  color: #d3e2f2;
 }
 
 /* NAVIGATION */
 nav {
   background: white;
-  padding: 15px 7%;
+  padding: 13px 7%;
   display: flex;
   flex-wrap: wrap;
-  gap: 27px;
-  box-shadow: 0 3px 10px #0000000b;
+  justify-content: center;
+  gap: 30px;
+  box-shadow: 0 3px 12px #0000000b;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav a {
   text-decoration: none;
-  color: #123967;
+  color: var(--navy);
   font-weight: bold;
   font-size: 14px;
+  transition: .2s;
 }
 
 nav a:hover {
-  color: #e5a52e;
+  color: var(--gold);
 }
 
 /* HERO */
 .hero {
-  margin: 30px auto;
+  max-width: 1200px;
   width: 86%;
-  min-height: 320px;
-  border-radius: 18px;
-  background: linear-gradient(120deg,#123967,#2677b9);
+  margin: 32px auto;
+  min-height: 390px;
+  border-radius: 20px;
+  background:
+    linear-gradient(110deg, rgba(13,43,76,.96), rgba(29,93,150,.85)),
+    radial-gradient(circle at right, #4c91c8, #123967);
   color: white;
-  padding: 65px 40px;
+  padding: 65px 55px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 12px 30px #12396720;
 }
 
 .hero span {
@@ -102,32 +128,41 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 38px;
-  margin: 15px 0;
-  max-width: 650px;
+  font-size: clamp(28px, 5vw, 43px);
+  line-height: 1.2;
+  margin: 17px 0;
+  max-width: 700px;
 }
 
 .hero p {
-  max-width: 600px;
+  max-width: 620px;
   color: #e2edf8;
+  font-size: 16px;
 }
 
 .hero-button {
   display: inline-block;
-  margin-top: 25px;
-  background: #e5a52e;
+  margin-top: 27px;
+  background: var(--gold);
   color: #123967;
-  padding: 12px 22px;
-  border-radius: 7px;
+  padding: 12px 24px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   width: fit-content;
+  transition: .2s;
+}
+
+.hero-button:hover {
+  background: #ffd36a;
+  transform: translateY(-2px);
 }
 
 /* CONTENT */
 .container {
+  max-width: 1200px;
   width: 86%;
-  margin: 55px auto;
+  margin: 65px auto;
 }
 
 .section-title {
@@ -135,112 +170,212 @@ nav a:hover {
 }
 
 .section-title h2 {
-  color: #123967;
-  font-size: 26px;
+  color: var(--navy);
+  font-size: 27px;
+  margin-bottom: 4px;
 }
 
 .section-title p {
-  color: #718096;
+  color: var(--muted);
   font-size: 14px;
 }
 
-/* PROFIL */
+/* PROFILE */
 .profile {
   background: white;
-  padding: 30px;
-  border-radius: 12px;
-  border-left: 5px solid #e5a52e;
+  padding: 32px;
+  border-radius: 15px;
+  border-left: 5px solid var(--gold);
+  box-shadow: 0 5px 20px #00000008;
+}
+
+.profile h3 {
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.profile p {
+  margin-bottom: 7px;
 }
 
 /* LAYANAN */
+.services-note {
+  background: #eaf2fa;
+  color: var(--navy);
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 22px;
+  font-size: 14px;
+}
+
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .card {
   background: white;
-  padding: 25px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px #0000000a;
+  padding: 26px 23px;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px #00000009;
   text-decoration: none;
-  color: #263445;
-  transition: .3s;
+  color: var(--text);
+  transition: .25s;
   border: 1px solid #edf0f5;
+  display: block;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px #00000012;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px #12396718;
+  border-color: #d4e4f5;
 }
 
 .card .icon {
-  font-size: 32px;
-  margin-bottom: 12px;
+  width: 57px;
+  height: 57px;
+  border-radius: 13px;
+  background: #eaf2fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 29px;
+  margin-bottom: 17px;
 }
 
 .card h3 {
-  color: #123967;
+  color: var(--navy);
   font-size: 17px;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .card p {
   font-size: 13px;
-  color: #718096;
+  color: var(--muted);
+}
+
+.card .access {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #1d5d96;
 }
 
 /* INFORMASI */
 .info-box {
-  background: #eaf2fa;
-  border-radius: 12px;
-  padding: 30px;
+  background: linear-gradient(120deg, #eaf2fa, #f3f7fc);
+  border-radius: 15px;
+  padding: 32px;
+  border: 1px solid #e0eaf4;
+}
+
+.info-box h3 {
+  color: var(--navy);
+  margin-bottom: 10px;
 }
 
 /* FOOTER */
 footer {
   background: #102f50;
   color: white;
-  padding: 35px 7%;
-  margin-top: 70px;
+  padding: 42px 7%;
+  margin-top: 75px;
   text-align: center;
+}
+
+footer h3 {
+  margin-bottom: 10px;
 }
 
 footer p {
   color: #cbdced;
   font-size: 13px;
-  margin-top: 8px;
+  margin-top: 7px;
 }
 
 /* RESPONSIVE */
-@media(max-width: 800px) {
+@media(max-width: 850px) {
   .cards {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    padding: 50px 35px;
   }
 }
 
 @media(max-width: 600px) {
+  header {
+    padding: 14px 5%;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+    font-size: 25px;
+  }
+
+  .school-name h2 {
+    font-size: 16px;
+  }
+
+  .school-name p {
+    font-size: 11px;
+  }
+
+  nav {
+    padding: 12px 5%;
+    gap: 12px 19px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
   .hero {
+    width: 90%;
+    min-height: 310px;
     padding: 40px 25px;
-    min-height: 280px;
+    margin: 22px auto;
   }
 
   .hero h1 {
-    font-size: 27px;
+    font-size: 29px;
+  }
+
+  .hero p {
+    font-size: 14px;
   }
 
   .container {
     width: 90%;
+    margin: 45px auto;
+  }
+
+  .section-title h2 {
+    font-size: 23px;
+  }
+
+  .profile {
+    padding: 23px;
   }
 
   .cards {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .card {
-    padding: 18px 12px;
+    padding: 18px 13px;
+  }
+
+  .card .icon {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    margin-bottom: 12px;
   }
 
   .card h3 {
@@ -251,12 +386,18 @@ footer p {
     font-size: 12px;
   }
 
-  nav {
-    gap: 15px;
+  .card .access {
+    font-size: 11px;
   }
 
-  .school-name h2 {
-    font-size: 17px;
+  .info-box {
+    padding: 23px;
+  }
+}
+
+@media(max-width: 360px) {
+  .cards {
+    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -268,6 +409,7 @@ footer p {
 <header>
   <div class="header-content">
     <div class="logo">🏫</div>
+
     <div class="school-name">
       <h2>SD NEGERI 9 AIRGEGAS</h2>
       <p>Website Resmi Satuan Pendidikan</p>
@@ -286,7 +428,8 @@ footer p {
 
 <!-- BERANDA -->
 <section class="hero" id="beranda">
-  <span>SELAMAT DATANG</span>
+
+  <span>SELAMAT DATANG DI WEBSITE RESMI</span>
 
   <h1>SD NEGERI 9 AIRGEGAS</h1>
 
@@ -299,6 +442,7 @@ footer p {
   <a href="#profil" class="hero-button">
     Mengenal Sekolah →
   </a>
+
 </section>
 
 <!-- PROFIL -->
@@ -310,6 +454,7 @@ footer p {
   </div>
 
   <div class="profile">
+
     <h3>SD NEGERI 9 AIRGEGAS</h3>
 
     <p>
@@ -326,6 +471,7 @@ footer p {
     <p><b>Status:</b> Negeri</p>
     <p><b>Jenjang:</b> Sekolah Dasar</p>
     <p><b>Alamat:</b> JL. Payung - Air Bara</p>
+
   </div>
 
 </section>
@@ -338,52 +484,72 @@ footer p {
     <p>Akses layanan administrasi dan informasi sekolah</p>
   </div>
 
+  <div class="services-note">
+    🔐 Seluruh layanan administrasi sekolah menggunakan
+    satu halaman login. Setelah masuk, pilih menu layanan
+    yang ingin digunakan.
+  </div>
+
   <div class="cards">
 
-   
+    <!-- SEMUA MENU ADMINISTRASI MENUJU SATU APLIKASI -->
+    <a href="https://script.google.com/macros/s/AKfycbzqwf6wcMMfKYsvVWRAus41PGV8yarTeci8rqogspGyBrv7ImZDMbDfY1T-lw0217cn8w/exec"
+       class="card"
+       target="_blank"
+       rel="noopener">
+      <div class="icon">👨‍🎓</div>
+      <h3>Data Siswa</h3>
+      <p>Pengelolaan dan pencarian data peserta didik.</p>
+      <span class="access">Masuk ke aplikasi →</span>
+    </a>
 
-<a href="https://script.google.com/macros/s/AKfycbzqwf6wcMMfKYsvVWRAus41PGV8yarTeci8rqogspGyBrv7ImZDMbDfY1T-lw0217cn8w/exec"
-   class="card"
-   target="_blank"
-   rel="noopener">
-  <div class="icon">👨‍🎓</div>
-  <h3>Data Siswa</h3>
-  <p>Pengelolaan data peserta didik.</p>
-</a>
-
-
-    <a href="#" class="card">
+    <a href="https://script.google.com/macros/s/AKfycbzqwf6wcMMfKYsvVWRAus41PGV8yarTeci8rqogspGyBrv7ImZDMbDfY1T-lw0217cn8w/exec"
+       class="card"
+       target="_blank"
+       rel="noopener">
       <div class="icon">👨‍🏫</div>
       <h3>Data Guru</h3>
       <p>Informasi guru dan tenaga kependidikan.</p>
+      <span class="access">Masuk ke aplikasi →</span>
     </a>
 
-    <a href="#" class="card">
+    <a href="https://script.google.com/macros/s/AKfycbzqwf6wcMMfKYsvVWRAus41PGV8yarTeci8rqogspGyBrv7ImZDMbDfY1T-lw0217cn8w/exec"
+       class="card"
+       target="_blank"
+       rel="noopener">
       <div class="icon">📨</div>
       <h3>Surat Keluar</h3>
-      <p>Aplikasi administrasi persuratan.</p>
+      <p>Aplikasi pencatatan administrasi surat keluar.</p>
+      <span class="access">Masuk ke aplikasi →</span>
     </a>
 
-    <a href="#" class="card">
+    <a href="https://script.google.com/macros/s/AKfycbzqwf6wcMMfKYsvVWRAus41PGV8yarTeci8rqogspGyBrv7ImZDMbDfY1T-lw0217cn8w/exec"
+       class="card"
+       target="_blank"
+       rel="noopener">
       <div class="icon">📊</div>
       <h3>Statistik Siswa</h3>
-      <p>Grafik dan informasi peserta didik.</p>
+      <p>Grafik dan informasi jumlah peserta didik.</p>
+      <span class="access">Masuk ke aplikasi →</span>
     </a>
 
-    <a href="#" class="card">
-      <div class="icon">🧾</div>
-      <h3>LAYANAN SISWA MUTASI</h3>
-      <p>Aplikasi Pencatatan Siswa Mutasi.</p>
-      <p>Aplikasi Registyrasi Siswa</p>
+    <!-- LAYANAN PENGEMBANGAN BERIKUTNYA -->
+    <a href="#informasi" class="card">
+      <div class="icon">🔄</div>
+      <h3>Layanan Siswa Mutasi</h3>
+      <p>Aplikasi pencatatan dan registrasi siswa mutasi.</p>
+      <span class="access">Informasi layanan →</span>
     </a>
 
-    <a href="#" class="card">
+    <a href="#informasi" class="card">
       <div class="icon">📚</div>
       <h3>Informasi Akademik</h3>
-      <p>Informasi kegiatan pendidikan.</p>
+      <p>Informasi kegiatan dan program pendidikan sekolah.</p>
+      <span class="access">Informasi sekolah →</span>
     </a>
 
   </div>
+
 </section>
 
 <!-- INFORMASI -->
@@ -395,19 +561,22 @@ footer p {
   </div>
 
   <div class="info-box">
+
     <h3>Selamat Datang di Website Sekolah</h3>
+
     <p>
       Website ini dikembangkan sebagai pusat
       informasi, komunikasi dan layanan digital
       SD NEGERI 9 AIRGEGAS.
     </p>
+
   </div>
 
 </section>
 
-
 <!-- FOOTER -->
 <footer id="kontak">
+
   <h3>SD NEGERI 9 AIRGEGAS</h3>
 
   <p>
@@ -417,9 +586,14 @@ footer p {
   </p>
 
   <p>
+    NPSN 10900887
+  </p>
+
+  <p>
     © 2026 SD NEGERI 9 AIRGEGAS.
     Seluruh Hak Dilindungi.
   </p>
+
 </footer>
 
 </body>
